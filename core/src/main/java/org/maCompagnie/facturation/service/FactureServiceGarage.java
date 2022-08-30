@@ -12,4 +12,20 @@ public class FactureServiceGarage implements FactureServiceInterface{
         facture.setNumero(String.valueOf("FACT_" + (++dernierNumFacture)));
         factureRepository.creer(facture);
     }
+
+    public static long getDernierNumFacture() {
+        return dernierNumFacture;
+    }
+
+    public static void setDernierNumFacture(long dernierNumFacture) {
+        FactureServiceGarage.dernierNumFacture = dernierNumFacture;
+    }
+
+    public FactureRepositoryInterface getFactureRepository() {
+        return factureRepository;
+    }
+
+    public void setFactureRepository(FactureRepositoryInterface factureRepository) {
+        this.factureRepository = factureRepository;
+    }
 }

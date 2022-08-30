@@ -7,9 +7,17 @@ public class FactureControllerGarage implements FactureControllerInterface
 {
     private FactureServiceInterface factureService;
     public void creerFacture() {
-        String nomClient = "test";//nom recupérer depuis un formulaire
+        String nomClient = "Phoenix Armor Suit";//nom recupérer depuis un formulaire
         Facture facture = new Facture();
         facture.setNomClient(nomClient);
         factureService.creerFacture(facture);
+    }
+
+    public FactureServiceInterface getFactureService() {
+        return factureService;
+    }
+
+    public void setFactureService(FactureServiceInterface factureService) {
+        this.factureService = factureService;
     }
 }

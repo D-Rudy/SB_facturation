@@ -3,16 +3,14 @@ package org.maCompagnie.facturation.controller;
 import org.maCompagnie.facturation.model.Facture;
 import org.maCompagnie.facturation.service.FactureServiceInterface;
 
-import java.util.Scanner;
-
-public class FactureController implements FactureControllerInterface{
+public class FactureControllerMagasin2 implements FactureControllerInterface {
     private FactureServiceInterface factureService;
-    public void creerFacture(){
-        System.out.println( "Quel est le nom du client?" );
-        Scanner input = new Scanner(System.in);
-        String nomClient = input.nextLine();
+    @Override
+    public void creerFacture() {
+        //Simulation d'une douchette
+        System.out.println("Usage d'une douchette");
         Facture facture = new Facture();
-        facture.setNomClient(nomClient);
+        facture.setNomClient("Gifted Bird");
         factureService.creerFacture(facture);
     }
 

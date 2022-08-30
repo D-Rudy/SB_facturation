@@ -11,4 +11,5 @@ public class FactureRepository implements FactureRepositoryInterface {
         factures.add(facture);
         System.out.println("La facture avec le numéro " + facture.getNumero() + " pour " + facture.getNomClient() + " a bien été ajoutée.");
     }
+
 }
