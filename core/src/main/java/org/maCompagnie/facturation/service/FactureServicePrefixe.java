@@ -3,11 +3,13 @@ package org.maCompagnie.facturation.service;
 import org.maCompagnie.facturation.model.Facture;
 import org.maCompagnie.facturation.repository.FactureRepositoryInterface;
 
-public class FactureService implements FactureServiceInterface {
-    private static long dernierNumFacture = 0L;
-    private FactureRepositoryInterface factureRepository;
+public class FactureServicePrefixe implements FactureServiceInterface{
+    private static long dernierNumFacture = 112L;
+
+    //Les numéros de factures du garage ont comme forme FACT_112
+    private FactureRepositoryInterface factureRepository;//On n'instancie pas de classe concrète pour éviter les dépendances
     public void creerFacture (Facture facture){
-        facture.setNumero(String.valueOf(++dernierNumFacture));
+        facture.setNumero(String.valueOf("FACT_" + (++dernierNumFacture)));
         factureRepository.creer(facture);
     }
 
@@ -16,7 +18,7 @@ public class FactureService implements FactureServiceInterface {
     }
 
     public static void setDernierNumFacture(long dernierNumFacture) {
-        FactureService.dernierNumFacture = dernierNumFacture;
+        FactureServicePrefixe.dernierNumFacture = dernierNumFacture;
     }
 
     public FactureRepositoryInterface getFactureRepository() {

@@ -3,7 +3,7 @@ package org.maCompagnie.facturation.controller;
 import org.maCompagnie.facturation.model.Facture;
 import org.maCompagnie.facturation.service.FactureServiceInterface;
 
-public class FactureControllerMagasin2 implements FactureControllerInterface {
+public class FactureControllerDouchette implements FactureControllerInterface {
     private FactureServiceInterface factureService;
     @Override
     public void creerFacture() {
