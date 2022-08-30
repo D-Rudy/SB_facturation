@@ -20,12 +20,12 @@ public class App
         //Configuration de base
         if (configuration == 1){
             FactureController factureController = new FactureController();
-            factureController.creerFactureAvecConsole();
+            factureController.creerFacture();
         }
         //configuration du garage
         else if (configuration ==2) {
             FactureControllerGarage factureControllerGarage = new FactureControllerGarage();
-            factureControllerGarage.creerFactureAvecForm();
+            factureControllerGarage.creerFacture();
 
         }
     }

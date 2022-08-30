@@ -1,19 +1,15 @@
 package org.maCompagnie.facturation.controller;
 
 import org.maCompagnie.facturation.model.Facture;
-import org.maCompagnie.facturation.service.FactureService;
-import org.maCompagnie.facturation.service.FactureServiceGarage;
+import org.maCompagnie.facturation.service.FactureServiceInterface;
 
-import java.util.Scanner;
-
-public class FactureControllerGarage
+public class FactureControllerGarage implements FactureControllerInterface
 {
-    public void creerFactureAvecForm(){
+    private FactureServiceInterface factureService;
+    public void creerFacture() {
         String nomClient = "test";//nom recupérer depuis un formulaire
         Facture facture = new Facture();
         facture.setNomClient(nomClient);
-
-        FactureServiceGarage factureServiceGarage = new FactureServiceGarage();
-        factureServiceGarage.creerFacture(facture);
+        factureService.creerFacture(facture);
     }
 }

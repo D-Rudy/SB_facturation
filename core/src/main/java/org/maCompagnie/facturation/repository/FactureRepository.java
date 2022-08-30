@@ -5,7 +5,7 @@ import org.maCompagnie.facturation.model.Facture;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FactureRepository {
+public class FactureRepository implements FactureRepositoryInterface {
     private static List<Facture> factures = new ArrayList<>();
     public void creer (Facture facture){
         factures.add(facture);

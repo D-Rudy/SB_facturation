@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FactureRepositoryGarage {
+public class FactureRepositoryGarage implements FactureRepositoryInterface{
     public void creer (Facture facture){
       /* PreparedStatement statement = connexion.prepareStatement ("INSERT INTO facture (num_facture, nom_client) VALUES (?,?)");
      statement.executeUpdate();*/
