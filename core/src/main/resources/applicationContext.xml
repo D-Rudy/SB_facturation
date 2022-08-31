@@ -5,7 +5,10 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="idFactureService" class="org.maCompagnie.facturation.service.FactureServicePrefixe">
-        <property name="factureRepository" ref="idFactureRepository"/>
+        <property name="factureRepository" ref="idFactureRepository"/>   <!-- ref = injection de dépendance -->
+        <property name="dernierNumFacture" value="112"/>     <!-- value = modifie la valeur d'une propriété avec son setter; Spring converti la valeur(ici la chaine de caractère sera convertie en Long) -->
+        <property name="prefix" value="FACT_"/>
+        <property name="fichier" value="/fichiers/fichierTest.txt"/>
     </bean>
 
     <bean class="org.maCompagnie.facturation.controller.FactureControllerWeb">
