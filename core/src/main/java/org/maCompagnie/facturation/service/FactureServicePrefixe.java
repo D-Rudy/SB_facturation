@@ -2,6 +2,7 @@ package org.maCompagnie.facturation.service;
 
 import org.maCompagnie.facturation.model.Facture;
 import org.maCompagnie.facturation.repository.FactureRepositoryInterface;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.File;
 
@@ -11,6 +12,7 @@ public class FactureServicePrefixe implements FactureServiceInterface{
     private File fichier;
 
     //Les numéros de factures du garage ont comme forme FACT_112
+    @Autowired
     private FactureRepositoryInterface factureRepository;//On n'instancie pas de classe concrète pour éviter les dépendances
     public void creerFacture (Facture facture){
         facture.setNumero(prefix + (++dernierNumFacture));
