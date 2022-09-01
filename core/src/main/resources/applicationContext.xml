@@ -4,10 +4,10 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
-    <context:annotation-config/>
-    <context:property-placeholder location="classpath:application.properties"/>
-    <context:component-scan base-package="org.maCompagnie.facturation.controller.web"/>
+
+    <!--context:property-placeholder location="classpath:application.properties"/>
+    < context:component-scan base-package="org.maCompagnie.facturation.controller.web"/>
     <context:component-scan base-package="org.maCompagnie.facturation.service.prefixe"/>
-    <context:component-scan base-package="org.maCompagnie.facturation.repository.database"/>
+    <context:component-scan base-package="org.maCompagnie.facturation.repository.database"/-->
 
 </beans>
