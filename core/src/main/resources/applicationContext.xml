@@ -6,16 +6,8 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
     <context:annotation-config/>
     <context:property-placeholder location="classpath:application.properties"/>
-    <context:component-scan base-package="org.maCompagnie.facturation"/>
-        <!-- bean class="org.maCompagnie.facturation.service.FactureServicePrefixe">
-             ref = injection de dépendance
-    </bean>
-
-    <bean class="org.maCompagnie.facturation.controller.FactureControllerWeb">
-         Spring invoque le setter de la propriété factureService
-    </bean>
-
-    <bean class="org.maCompagnie.facturation.repository.FactureRepositoryDatabase"/-->
-
+    <context:component-scan base-package="org.maCompagnie.facturation.controller.web"/>
+    <context:component-scan base-package="org.maCompagnie.facturation.service.prefixe"/>
+    <context:component-scan base-package="org.maCompagnie.facturation.repository.database"/>
 
 </beans>

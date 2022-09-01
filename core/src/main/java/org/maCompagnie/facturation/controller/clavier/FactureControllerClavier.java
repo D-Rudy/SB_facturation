@@ -1,18 +1,18 @@
-package org.maCompagnie.facturation.controller;
+package org.maCompagnie.facturation.controller.clavier;
 
+import org.maCompagnie.facturation.controller.FactureControllerInterface;
 import org.maCompagnie.facturation.model.Facture;
 import org.maCompagnie.facturation.service.FactureServiceInterface;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import java.util.Scanner;
 @Controller
-public class FactureControllerWeb implements FactureControllerInterface
-{
-    @Autowired
+public class FactureControllerClavier implements FactureControllerInterface {
     private FactureServiceInterface factureService;
-    public void creerFacture() {
-        String nomClient = "Phoenix Armor Suit";//nom recupérer depuis un formulaire
+    public void creerFacture(){
+        System.out.println( "Quel est le nom du client?" );
+        Scanner input = new Scanner(System.in);
+        String nomClient = input.nextLine();
         Facture facture = new Facture();
         facture.setNomClient(nomClient);
         factureService.creerFacture(facture);

@@ -1,6 +1,7 @@
-package org.maCompagnie.facturation.repository;
+package org.maCompagnie.facturation.repository.memoire;
 
 import org.maCompagnie.facturation.model.Facture;
+import org.maCompagnie.facturation.repository.FactureRepositoryInterface;
 
 import java.util.ArrayList;
 import java.util.List;

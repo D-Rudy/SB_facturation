@@ -1,5 +1,6 @@
-package org.maCompagnie.facturation.controller;
+package org.maCompagnie.facturation.controller.douchette;
 
+import org.maCompagnie.facturation.controller.FactureControllerInterface;
 import org.maCompagnie.facturation.model.Facture;
 import org.maCompagnie.facturation.service.FactureServiceInterface;
 import org.springframework.stereotype.Controller;

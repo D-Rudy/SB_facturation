@@ -1,7 +1,8 @@
-package org.maCompagnie.facturation.service;
+package org.maCompagnie.facturation.service.numero;
 
 import org.maCompagnie.facturation.model.Facture;
 import org.maCompagnie.facturation.repository.FactureRepositoryInterface;
+import org.maCompagnie.facturation.service.FactureServiceInterface;
 import org.springframework.stereotype.Service;
 
 @Service

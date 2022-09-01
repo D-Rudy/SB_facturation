@@ -1,14 +1,15 @@
-package org.maCompagnie.facturation.service;
+package org.maCompagnie.facturation.service.prefixe;
 
 import org.maCompagnie.facturation.model.Facture;
 import org.maCompagnie.facturation.repository.FactureRepositoryInterface;
+import org.maCompagnie.facturation.service.FactureServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
 @Service
-public class FactureServicePrefixe implements FactureServiceInterface{
+public class FactureServicePrefixe implements FactureServiceInterface {
     @Value("${facture.numFacture}")
     private long dernierNumFacture;
     @Value("${facture.prefix}")
