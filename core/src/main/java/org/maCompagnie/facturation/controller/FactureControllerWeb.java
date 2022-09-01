@@ -2,8 +2,11 @@ package org.maCompagnie.facturation.controller;
 
 import org.maCompagnie.facturation.model.Facture;
 import org.maCompagnie.facturation.service.FactureServiceInterface;
-import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+@Controller
 public class FactureControllerWeb implements FactureControllerInterface
 {
     @Autowired

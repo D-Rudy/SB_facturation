@@ -2,7 +2,9 @@ package org.maCompagnie.facturation.controller;
 
 import org.maCompagnie.facturation.model.Facture;
 import org.maCompagnie.facturation.service.FactureServiceInterface;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class FactureControllerDouchette implements FactureControllerInterface {
     private FactureServiceInterface factureService;
     @Override

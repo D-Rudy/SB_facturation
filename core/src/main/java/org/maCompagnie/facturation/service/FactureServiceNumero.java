@@ -2,7 +2,9 @@ package org.maCompagnie.facturation.service;
 
 import org.maCompagnie.facturation.model.Facture;
 import org.maCompagnie.facturation.repository.FactureRepositoryInterface;
+import org.springframework.stereotype.Service;
 
+@Service
 public class FactureServiceNumero implements FactureServiceInterface {
     private static long dernierNumFacture = 0L;
     private FactureRepositoryInterface factureRepository;
