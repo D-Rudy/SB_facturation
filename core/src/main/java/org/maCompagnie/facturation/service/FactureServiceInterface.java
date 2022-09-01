@@ -5,5 +5,5 @@ import org.maCompagnie.facturation.repository.FactureRepositoryInterface;
 
 public interface FactureServiceInterface {
     void creerFacture (Facture facture);
-    public void setFactureRepository(FactureRepositoryInterface factureRepository);
+    void setFactureRepository(FactureRepositoryInterface factureRepository);
 }

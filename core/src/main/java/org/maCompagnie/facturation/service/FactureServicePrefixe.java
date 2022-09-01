@@ -13,7 +13,7 @@ public class FactureServicePrefixe implements FactureServiceInterface{
     //Les numéros de factures du garage ont comme forme FACT_112
     private FactureRepositoryInterface factureRepository;//On n'instancie pas de classe concrète pour éviter les dépendances
     public void creerFacture (Facture facture){
-        facture.setNumero(String.valueOf(prefix + (++dernierNumFacture)));
+        facture.setNumero(prefix + (++dernierNumFacture));
         factureRepository.creer(facture);
     }
 

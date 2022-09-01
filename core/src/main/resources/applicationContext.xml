@@ -2,20 +2,20 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="byType">
 
-    <bean id="idFactureService" class="org.maCompagnie.facturation.service.FactureServicePrefixe">
-        <property name="factureRepository" ref="idFactureRepository"/>   <!-- ref = injection de dépendance -->
+    <bean class="org.maCompagnie.facturation.service.FactureServicePrefixe">
+        <!-- ref = injection de dépendance -->
         <property name="dernierNumFacture" value="112"/>     <!-- value = modifie la valeur d'une propriété avec son setter; Spring converti la valeur(ici la chaine de caractère sera convertie en Long) -->
         <property name="prefix" value="FACT_"/>
         <property name="fichier" value="/fichiers/fichierTest.txt"/>
     </bean>
 
     <bean class="org.maCompagnie.facturation.controller.FactureControllerWeb">
-        <property name="factureService" ref="idFactureService"/>
         <!--Spring invoque le setter de la propriété factureService-->
     </bean>
 
-    <bean id="idFactureRepository" class="org.maCompagnie.facturation.repository.FactureRepositoryDatabase"/>
+    <bean class="org.maCompagnie.facturation.repository.FactureRepositoryDatabase"/>
+
 
 </beans>
