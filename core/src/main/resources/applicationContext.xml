@@ -4,16 +4,11 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
-    <context:annotation-config>
-
-    </context:annotation-config>
+    <context:annotation-config/>
+    <context:property-placeholder location="classpath:application.properties"/>
 
     <bean class="org.maCompagnie.facturation.service.FactureServicePrefixe">
         <!-- ref = injection de dépendance -->
-        <property name="dernierNumFacture"
-                  value="112"/>     <!-- value = modifie la valeur d'une propriété avec son setter; Spring converti la valeur(ici la chaine de caractère sera convertie en Long) -->
-        <property name="prefix" value="FACT_"/>
-        <property name="fichier" value="/fichiers/fichierTest.txt"/>
     </bean>
 
     <bean class="org.maCompagnie.facturation.controller.FactureControllerWeb">
