@@ -6,7 +6,7 @@ import org.maCompagnie.facturation.service.FactureServiceInterface;
 import org.springframework.stereotype.Controller;
 
 import java.util.Scanner;
-@Controller
+//@Controller
 public class FactureControllerClavier implements FactureControllerInterface {
     private FactureServiceInterface factureService;
     public void creerFacture(){

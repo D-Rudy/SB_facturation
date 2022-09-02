@@ -3,8 +3,8 @@
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="fileset" name="ApplicationContext" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
+        <fileset id="fileset2" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/org/maCompagnie/facturation/App.java</file>
         </fileset>
       </configuration>
     </facet>
@@ -21,6 +21,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Spring-5.2.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.7.3" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.7.3" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.3.22" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.3.22" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.3.22" level="project" />

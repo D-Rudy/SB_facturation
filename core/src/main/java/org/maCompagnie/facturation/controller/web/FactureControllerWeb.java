@@ -6,17 +6,24 @@ import org.maCompagnie.facturation.service.FactureServiceInterface;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class FactureControllerWeb implements FactureControllerInterface
-{
+public class FactureControllerWeb implements FactureControllerInterface {
     @Autowired
     private FactureServiceInterface factureService;
+
     public void creerFacture() {
         String nomClient = "Phoenix Armor Suit";//nom recupérer depuis un formulaire
         Facture facture = new Facture();
         facture.setNomClient(nomClient);
         factureService.creerFacture(facture);
+    }
+
+    @RequestMapping("/facture-home")
+    public String displayHome() {
+        System.out.println("displayHome ok...");
+        return "";
     }
 
     public FactureServiceInterface getFactureService() {
