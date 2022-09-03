@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Hello tous le monde!</title>
 </head>
 <body>
 Hello tous le monde!
+<span th:text="${#locale.country}">FR</span>
 </body>
 </html>

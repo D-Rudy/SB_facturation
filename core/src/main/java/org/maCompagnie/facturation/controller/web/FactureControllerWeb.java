@@ -23,7 +23,7 @@ public class FactureControllerWeb implements FactureControllerInterface {
     @RequestMapping("/facture-home")
     public String displayHome() {
         System.out.println("displayHome ok...");
-        return "";
+        return "index";
     }
 
     public FactureServiceInterface getFactureService() {
