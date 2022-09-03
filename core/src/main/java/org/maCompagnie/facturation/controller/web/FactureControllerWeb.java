@@ -6,7 +6,11 @@ import org.maCompagnie.facturation.service.FactureServiceInterface;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 public class FactureControllerWeb implements FactureControllerInterface {
@@ -21,9 +25,11 @@ public class FactureControllerWeb implements FactureControllerInterface {
     }
 
     @RequestMapping("/facture-home")
-    public String displayHome() {
+    public @ModelAttribute("factures") List<Facture> displayHome() {
         System.out.println("displayHome ok...");
-        return "index";
+        List<Facture> factures = factureService.getFactureList();
+       // request.setAttribute("factures", factures);
+        return factures;
     }
 
     public FactureServiceInterface getFactureService() {

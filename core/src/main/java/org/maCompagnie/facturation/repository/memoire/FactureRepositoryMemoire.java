@@ -14,4 +14,9 @@ public class FactureRepositoryMemoire implements FactureRepositoryInterface {
         System.out.println("La facture avec le numéro " + facture.getNumero() + " pour " + facture.getNomClient() + " a bien été ajoutée.");
     }
 
+    @Override
+    public List<Facture> list() {
+       throw new UnsupportedOperationException();
+    }
+
 }

@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
+import java.util.List;
+
 @Service
 public class FactureServicePrefixe implements FactureServiceInterface {
     @Value("${facture.numFacture}")
@@ -29,6 +31,11 @@ public class FactureServicePrefixe implements FactureServiceInterface {
 
     public void setFactureRepository(FactureRepositoryInterface factureRepository) {
         this.factureRepository = factureRepository;
+    }
+
+    @Override
+    public List<Facture> getFactureList() {
+        return factureRepository.list();
     }
 
     public long getDernierNumFacture() {
@@ -54,4 +61,6 @@ public class FactureServicePrefixe implements FactureServiceInterface {
     public void setFichier(File fichier) {
         this.fichier = fichier;
     }
+
+
 }
